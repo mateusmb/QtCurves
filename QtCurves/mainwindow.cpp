@@ -72,14 +72,22 @@ void MainWindow::on_spinCount_valueChanged(int count)
     this->ui->renderArea->setStepCount(count);
 }
 
-void MainWindow::on_btnBackground_clicked()
+void MainWindow::on_btnLineColor_clicked()
+{
+    QColor color = QColorDialog::getColor(ui->renderArea->shapeColor(), this, "Select Color");
+    this->ui->renderArea->setShapeColor(color);
+}
+
+void MainWindow::on_btnBackgroundColor_clicked()
 {
     QColor color = QColorDialog::getColor(ui->renderArea->backgroundColor(), this, "Select Color");
     this->ui->renderArea->setBackgroundColor(color);
 }
 
-void MainWindow::on_btnLineColor_clicked()
+void MainWindow::on_btnBackground_clicked()
 {
-    QColor color = QColorDialog::getColor(ui->renderArea->shapeColor(), this, "Select Color");
-    this->ui->renderArea->setShapeColor(color);
+}
+
+void MainWindow::on_pushButton_clicked()
+{
 }

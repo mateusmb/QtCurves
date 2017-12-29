@@ -37,7 +37,7 @@ public:
     QVBoxLayout *verticalLayout_2;
     RenderArea *renderArea;
     QHBoxLayout *horizontalLayout_4;
-    QPushButton *pushButton;
+    QPushButton *btnBackgroundColor;
     QPushButton *btnLineColor;
     QSpacerItem *horizontalSpacer;
     QVBoxLayout *verticalLayout;
@@ -79,10 +79,10 @@ public:
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setSpacing(6);
         horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
-        pushButton = new QPushButton(centralWidget);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
+        btnBackgroundColor = new QPushButton(centralWidget);
+        btnBackgroundColor->setObjectName(QStringLiteral("btnBackgroundColor"));
 
-        horizontalLayout_4->addWidget(pushButton);
+        horizontalLayout_4->addWidget(btnBackgroundColor);
 
         btnLineColor = new QPushButton(centralWidget);
         btnLineColor->setObjectName(QStringLiteral("btnLineColor"));
@@ -140,6 +140,7 @@ public:
         spinScale->setObjectName(QStringLiteral("spinScale"));
         spinScale->setMaximumSize(QSize(69, 16777215));
         spinScale->setDecimals(1);
+        spinScale->setMaximum(150);
         spinScale->setSingleStep(0.1);
 
         horizontalLayout->addWidget(spinScale);
@@ -200,7 +201,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
-        pushButton->setText(QApplication::translate("MainWindow", "Background", Q_NULLPTR));
+        btnBackgroundColor->setText(QApplication::translate("MainWindow", "Background", Q_NULLPTR));
         btnLineColor->setText(QApplication::translate("MainWindow", "Line Color", Q_NULLPTR));
         btnAstroid->setText(QApplication::translate("MainWindow", "Astroid", Q_NULLPTR));
         btnCycloid->setText(QApplication::translate("MainWindow", "Cycloid", Q_NULLPTR));
