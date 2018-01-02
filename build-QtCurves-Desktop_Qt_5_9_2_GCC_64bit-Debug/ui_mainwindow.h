@@ -46,6 +46,7 @@ public:
     QPushButton *btnHuygens;
     QPushButton *btnHypo;
     QPushButton *btnLine;
+    QPushButton *btnCircle;
     QHBoxLayout *horizontalLayout;
     QLabel *label;
     QDoubleSpinBox *spinScale;
@@ -126,6 +127,11 @@ public:
         btnLine->setObjectName(QStringLiteral("btnLine"));
 
         verticalLayout->addWidget(btnLine);
+
+        btnCircle = new QPushButton(centralWidget);
+        btnCircle->setObjectName(QStringLiteral("btnCircle"));
+
+        verticalLayout->addWidget(btnCircle);
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setSpacing(6);
@@ -208,6 +214,7 @@ public:
         btnHuygens->setText(QApplication::translate("MainWindow", "Huygens", Q_NULLPTR));
         btnHypo->setText(QApplication::translate("MainWindow", "Hypo Cycloid", Q_NULLPTR));
         btnLine->setText(QApplication::translate("MainWindow", "Line", Q_NULLPTR));
+        btnCircle->setText(QApplication::translate("MainWindow", "Circle", Q_NULLPTR));
         label->setText(QApplication::translate("MainWindow", "Scale", Q_NULLPTR));
         label_2->setText(QApplication::translate("MainWindow", "Interval Length", Q_NULLPTR));
         label_3->setText(QApplication::translate("MainWindow", "Step Count", Q_NULLPTR));

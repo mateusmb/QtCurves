@@ -84,10 +84,9 @@ void MainWindow::on_btnBackgroundColor_clicked()
     this->ui->renderArea->setBackgroundColor(color);
 }
 
-void MainWindow::on_btnBackground_clicked()
+void MainWindow::on_btnCircle_clicked()
 {
-}
-
-void MainWindow::on_pushButton_clicked()
-{
+    this->ui->renderArea->setShape(RenderArea::Circle);
+    this->ui->renderArea->repaint();
+    update_ui();
 }
