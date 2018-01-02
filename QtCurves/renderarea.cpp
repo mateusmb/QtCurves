@@ -50,6 +50,10 @@ void RenderArea::on_shape_changed() {
         mIntervalLength = 2 * M_PI;
         mScale = 100;
         mStepCount = 128;
+    case Ellipse:
+        mIntervalLength = 2 * M_PI;
+        mScale = 75;
+        mStepCount = 256;
     default:
         break;
     }
@@ -74,6 +78,8 @@ QPointF RenderArea::compute(float t) {
         break;
     case Circle:
         return compute_circle(t);
+    case Ellipse:
+        return compute_ellipse(t);
     default:
         break;
     }
@@ -117,6 +123,11 @@ QPointF RenderArea::compute_circle(float t) {
     return QPointF(cos(t), sin(t));
 }
 
+QPointF RenderArea::compute_ellipse(float t) {
+    float a = 2.0f;
+    float b = 1.1f;
+    return QPointF(a*cos(t), b*sin(t));
+}
 void RenderArea::paintEvent(QPaintEvent *event) {
     Q_UNUSED(event);
     QPainter painter(this);
