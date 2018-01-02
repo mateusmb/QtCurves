@@ -58,6 +58,10 @@ void RenderArea::on_shape_changed() {
         mIntervalLength = 12 * M_PI;
         mScale = 10;
         mStepCount = 512;
+    case StarFish:
+        mIntervalLength = 6 * M_PI;
+        mScale = 25;
+        mStepCount = 256;
     default:
         break;
     }
@@ -86,6 +90,8 @@ QPointF RenderArea::compute(float t) {
         return compute_ellipse(t);
     case Fancy:
         return compute_fancy(t);
+    case StarFish:
+        return compute_starfish(t);
     default:
         break;
     }
@@ -139,6 +145,16 @@ QPointF RenderArea::compute_fancy(float t) {
     return QPointF(
                 11.0f * cos(t) - 6.0f * cos((11.0f/6.0f)*t),
                 11.0f * sin(t) - 6.0f * sin((11.0f/6.0f)*t)
+                );
+}
+
+QPointF RenderArea::compute_starfish(float t) {
+    float R = 5.0f;
+    float r = 3.0f;
+    float d = 5.0f;
+    return QPointF(
+                (R-r) * cos(t) + d * cos(t*((R-r)/r)),
+                (R-r) * sin(t) - d * sin(t*((R-r)/r))
                 );
 }
 

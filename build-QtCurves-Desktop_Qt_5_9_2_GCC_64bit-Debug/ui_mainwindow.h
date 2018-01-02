@@ -49,6 +49,7 @@ public:
     QPushButton *btnCircle;
     QPushButton *btnEllipse;
     QPushButton *btnFancy;
+    QPushButton *btnStarFish;
     QHBoxLayout *horizontalLayout;
     QLabel *label;
     QDoubleSpinBox *spinScale;
@@ -145,6 +146,11 @@ public:
 
         verticalLayout->addWidget(btnFancy);
 
+        btnStarFish = new QPushButton(centralWidget);
+        btnStarFish->setObjectName(QStringLiteral("btnStarFish"));
+
+        verticalLayout->addWidget(btnStarFish);
+
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setSpacing(6);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
@@ -229,6 +235,7 @@ public:
         btnCircle->setText(QApplication::translate("MainWindow", "Circle", Q_NULLPTR));
         btnEllipse->setText(QApplication::translate("MainWindow", "Ellipse", Q_NULLPTR));
         btnFancy->setText(QApplication::translate("MainWindow", "Fancy", Q_NULLPTR));
+        btnStarFish->setText(QApplication::translate("MainWindow", "StarFish", Q_NULLPTR));
         label->setText(QApplication::translate("MainWindow", "Scale", Q_NULLPTR));
         label_2->setText(QApplication::translate("MainWindow", "Interval Length", Q_NULLPTR));
         label_3->setText(QApplication::translate("MainWindow", "Step Count", Q_NULLPTR));

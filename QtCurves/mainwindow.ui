@@ -112,6 +112,13 @@
        </widget>
       </item>
       <item>
+       <widget class="QPushButton" name="btnStarFish">
+        <property name="text">
+         <string>StarFish</string>
+        </property>
+       </widget>
+      </item>
+      <item>
        <layout class="QHBoxLayout" name="horizontalLayout">
         <item>
          <widget class="QLabel" name="label">
