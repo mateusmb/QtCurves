@@ -50,6 +50,8 @@ public:
     QPushButton *btnEllipse;
     QPushButton *btnFancy;
     QPushButton *btnStarFish;
+    QPushButton *btnCloud;
+    QPushButton *btnCloud2;
     QHBoxLayout *horizontalLayout;
     QLabel *label;
     QDoubleSpinBox *spinScale;
@@ -65,7 +67,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(492, 375);
+        MainWindow->resize(492, 448);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         gridLayout = new QGridLayout(centralWidget);
@@ -150,6 +152,16 @@ public:
         btnStarFish->setObjectName(QStringLiteral("btnStarFish"));
 
         verticalLayout->addWidget(btnStarFish);
+
+        btnCloud = new QPushButton(centralWidget);
+        btnCloud->setObjectName(QStringLiteral("btnCloud"));
+
+        verticalLayout->addWidget(btnCloud);
+
+        btnCloud2 = new QPushButton(centralWidget);
+        btnCloud2->setObjectName(QStringLiteral("btnCloud2"));
+
+        verticalLayout->addWidget(btnCloud2);
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setSpacing(6);
@@ -236,6 +248,8 @@ public:
         btnEllipse->setText(QApplication::translate("MainWindow", "Ellipse", Q_NULLPTR));
         btnFancy->setText(QApplication::translate("MainWindow", "Fancy", Q_NULLPTR));
         btnStarFish->setText(QApplication::translate("MainWindow", "StarFish", Q_NULLPTR));
+        btnCloud->setText(QApplication::translate("MainWindow", "Cloud", Q_NULLPTR));
+        btnCloud2->setText(QApplication::translate("MainWindow", "Cloud 2", Q_NULLPTR));
         label->setText(QApplication::translate("MainWindow", "Scale", Q_NULLPTR));
         label_2->setText(QApplication::translate("MainWindow", "Interval Length", Q_NULLPTR));
         label_3->setText(QApplication::translate("MainWindow", "Step Count", Q_NULLPTR));
